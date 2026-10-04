@@ -21,11 +21,7 @@
       --border: #334155;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,280 +34,87 @@
       align-items: flex-start;
     }
 
-    .container {
-      width: 100%;
-      max-width: 720px;
-    }
+    .container { width: 100%; max-width: 720px; }
 
-    .header {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .header-icon {
-      font-size: 2.8rem;
-      margin-bottom: 8px;
-    }
-
+    .header { text-align: center; margin-bottom: 28px; }
+    .header-icon { font-size: 2.8rem; margin-bottom: 8px; }
     .header h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px;
       background: linear-gradient(90deg, #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
-    .header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: 6px;
-    }
+    .header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; }
 
     .main-card {
-      background: var(--card);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      background: var(--card); border-radius: 20px; border: 1px solid var(--border);
+      overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
 
     .camera-section {
-      position: relative;
-      background: #000;
-      aspect-ratio: 16 / 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative; background: #000; aspect-ratio: 16 / 10;
+      display: flex; align-items: center; justify-content: center;
     }
-
-    .camera-section img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .camera-placeholder {
-      color: #64748b;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .camera-placeholder .icon {
-      font-size: 3rem;
-      margin-bottom: 12px;
-      opacity: 0.5;
-    }
+    .camera-section img { width: 100%; height: 100%; object-fit: cover; }
+    .camera-placeholder { color: #64748b; text-align: center; padding: 20px; }
+    .camera-placeholder .icon { font-size: 3rem; margin-bottom: 12px; opacity: 0.5; }
 
     .live-badge {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      background: rgba(239, 68, 68, 0.9);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      backdrop-filter: blur(4px);
-      z-index: 10;
+      position: absolute; top: 16px; left: 16px;
+      background: rgba(239, 68, 68, 0.9); color: white;
+      font-size: 0.75rem; font-weight: 600; padding: 4px 10px;
+      border-radius: 20px; display: flex; align-items: center; gap: 6px;
+      backdrop-filter: blur(4px); z-index: 10;
     }
-
     .live-badge::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-      animation: pulse 1.5s infinite;
+      content: ''; width: 8px; height: 8px; background: white;
+      border-radius: 50%; animation: pulse 1.5s infinite;
     }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
+    .content { padding: 24px; }
 
-    .content {
-      padding: 24px;
-    }
-
-    .input-group {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
+    .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
     .input-group input {
-      flex: 1;
-      background: #0f172a;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 16px;
-      color: var(--text);
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
+      flex: 1; background: #0f172a; border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 16px; color: var(--text);
+      font-size: 0.9rem; outline: none;
     }
-
-    .input-group input:focus {
-      border-color: var(--primary);
-    }
-
-    .input-group input::placeholder {
-      color: #64748b;
-    }
+    .input-group input:focus { border-color: var(--primary); }
+    .input-group input::placeholder { color: #64748b; }
 
     .btn {
-      border: none;
-      border-radius: 12px;
-      padding: 12px 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      white-space: nowrap;
+      border: none; border-radius: 12px; padding: 12px 20px;
+      font-weight: 600; font-size: 0.9rem; cursor: pointer; white-space: nowrap;
     }
-
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-hover); }
 
     .status-btn {
-      width: 100%;
-      padding: 16px;
-      border: none;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      cursor: pointer;
-      margin-bottom: 24px;
-      transition: all 0.25s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+      width: 100%; padding: 16px; border: none; border-radius: 14px;
+      font-size: 1rem; font-weight: 600; color: white; cursor: default;
+      margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 10px;
     }
+    .status-normal { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); }
+    .status-alert { background: linear-gradient(135deg, #d97706, #f59e0b); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3); }
+    .status-emergency { background: linear-gradient(135deg, #dc2626, #ef4444); box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4); animation: emergency-pulse 1.2s infinite; }
+    @keyframes emergency-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
 
-    .status-normal {
-      background: linear-gradient(135deg, #16a34a, #22c55e);
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-    }
-
-    .status-alert {
-      background: linear-gradient(135deg, #d97706, #f59e0b);
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-    }
-
-    .status-emergency {
-      background: linear-gradient(135deg, #dc2626, #ef4444);
-      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
-      animation: emergency-pulse 1.2s infinite;
-    }
-
-    @keyframes emergency-pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .stat-card {
-      background: #0f172a;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      transition: border-color 0.2s;
+      background: #0f172a; border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px; text-align: center;
     }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-size: 2.4rem; font-weight: 700; line-height: 1; }
+    .stat-value.victims { color: #f87171; }
 
-    .stat-card:hover {
-      border-color: #475569;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .stat-value {
-      font-size: 2.4rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .stat-value.victims {
-      color: #f87171;
-    }
-
-    .stat-controls {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .stat-controls button {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: #1e293b;
-      color: var(--text);
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: all 0.15s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .stat-controls button:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-    }
-
-    .stat-controls .reset-btn {
-      width: auto;
-      padding: 0 12px;
-      font-size: 0.8rem;
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.8rem;
-      color: #64748b;
-      line-height: 1.6;
-    }
+    .footer-note { text-align: center; margin-top: 20px; font-size: 0.8rem; color: #64748b; line-height: 1.6; }
+    .update-info { text-align: center; margin-top: 12px; font-size: 0.75rem; color: #64748b; }
 
     @media (max-width: 500px) {
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-      .input-group {
-        flex-direction: column;
-      }
-      .header h1 {
-        font-size: 1.4rem;
-      }
+      .stats-grid { grid-template-columns: 1fr; }
+      .input-group { flex-direction: column; }
+      .header h1 { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -320,7 +123,7 @@
     <div class="header">
       <div class="header-icon">🤖</div>
       <h1>Rescue Robot Dashboard</h1>
-      <p>ระบบติดตามและควบคุมหุ่นยนต์กู้ภัย</p>
+      <p>ระบบติดตามและควบคุมหุ่นยนต์กู้ภัย (อัตโนมัติ)</p>
     </div>
 
     <div class="main-card">
@@ -338,8 +141,8 @@
           <button class="btn btn-primary" onclick="startCamera()">เชื่อมต่อ</button>
         </div>
 
-        <button class="status-btn status-normal" id="statusBtn" onclick="changeStatus()">
-          <span>🟢</span>
+        <button class="status-btn status-normal" id="statusBtn">
+          <span id="statusIcon">🟢</span>
           <span id="statusText">กำลังลาดตระเวน (ปกติ)</span>
         </button>
 
@@ -347,35 +150,28 @@
           <div class="stat-card">
             <div class="stat-label">ผู้ประสบภัย</div>
             <div class="stat-value victims" id="victimCount">0</div>
-            <div class="stat-controls">
-              <button onclick="changeVictim(-1)">−</button>
-              <button onclick="changeVictim(1)">+</button>
-              <button class="reset-btn" onclick="resetVictim()">รีเซ็ต</button>
-            </div>
           </div>
 
           <div class="stat-card">
             <div class="stat-label">สถานะกล้อง</div>
             <div class="stat-value" id="cameraStatus" style="font-size:1.4rem;color:#94a3b8;">ออฟไลน์</div>
-            <div style="margin-top:14px;font-size:0.75rem;color:#64748b;">
-              IP Webcam (Android)
-            </div>
+            <div style="margin-top:14px;font-size:0.75rem;color:#64748b;">IP Webcam (Android)</div>
           </div>
         </div>
+
+        <div class="update-info" id="lastUpdate">รอข้อมูลจากหุ่นยนต์...</div>
       </div>
     </div>
 
     <div class="footer-note">
-      ใช้แอป <strong>IP Webcam</strong> บนมือถือ Android<br>
-      แล้ววางลิงก์ที่ขึ้นต้นด้วย http://192.168... ลงในช่องด้านบน
+      สถานะและจำนวนผู้ประสบภัยอัปเดตอัตโนมัติจาก ThingSpeak<br>
+      ใช้แอป <strong>IP Webcam</strong> บนมือถือ Android สำหรับภาพสด
     </div>
   </div>
 
   <script>
-    let currentStatus = 0;
-    let victim = 0;
-
-    const statusList = [
+    const CHANNEL_ID = "3519977";
+    const STATUS_LIST = [
       { text: "กำลังลาดตระเวน (ปกติ)", class: "status-normal", icon: "🟢" },
       { text: "พบผู้ประสบภัย", class: "status-alert", icon: "🟠" },
       { text: "ขอความช่วยเหลือเร่งด่วน!", class: "status-emergency", icon: "🔴" }
@@ -384,15 +180,13 @@
     function startCamera() {
       const url = document.getElementById("cameraUrl").value.trim();
       const box = document.getElementById("cameraBox");
-
       if (!url) {
         alert("กรุณาวางลิงก์จากแอป IP Webcam ก่อน");
         return;
       }
-
       box.innerHTML = `
         <div class="live-badge">LIVE</div>
-        <img src="${url}" alt="Live Camera" 
+        <img src="${url}" alt="Live Camera"
              onload="setCameraOnline()"
              onerror="setCameraOffline()">
       `;
@@ -415,34 +209,34 @@
       `;
     }
 
-    function changeStatus() {
-      currentStatus = (currentStatus + 1) % 3;
-      const btn = document.getElementById("statusBtn");
-      const data = statusList[currentStatus];
-      
-      btn.className = "status-btn " + data.class;
-      document.getElementById("statusText").textContent = data.text;
-      btn.querySelector("span").textContent = data.icon;
+    function updateFromThingSpeak() {
+      const url = `https://api.thingspeak.com/channels/${CHANNEL_ID}/feeds/last.json`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          let status = parseInt(data.field1) || 0;
+          let victims = parseInt(data.field2) || 0;
+          if (status < 0 || status > 2) status = 0;
+
+          const btn = document.getElementById("statusBtn");
+          const info = STATUS_LIST[status];
+          btn.className = "status-btn " + info.class;
+          document.getElementById("statusIcon").textContent = info.icon;
+          document.getElementById("statusText").textContent = info.text;
+          document.getElementById("victimCount").textContent = victims;
+
+          const now = new Date().toLocaleTimeString('th-TH');
+          document.getElementById("lastUpdate").textContent = `อัปเดตล่าสุด: ${now}`;
+        })
+        .catch(err => {
+          document.getElementById("lastUpdate").textContent = "ไม่สามารถเชื่อมต่อ ThingSpeak ได้";
+          console.error(err);
+        });
     }
 
-    function changeVictim(num) {
-      victim = Math.max(0, victim + num);
-      document.getElementById("victimCount").textContent = victim;
-
-      if (victim > 0 && currentStatus === 0) {
-        currentStatus = 1;
-        const btn = document.getElementById("statusBtn");
-        const data = statusList[1];
-        btn.className = "status-btn " + data.class;
-        document.getElementById("statusText").textContent = data.text;
-        btn.querySelector("span").textContent = data.icon;
-      }
-    }
-
-    function resetVictim() {
-      victim = 0;
-      document.getElementById("victimCount").textContent = 0;
-    }
+    updateFromThingSpeak();
+    setInterval(updateFromThingSpeak, 15000);
   </script>
 </body>
 </html>
